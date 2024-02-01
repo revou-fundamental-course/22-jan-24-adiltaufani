@@ -1,29 +1,87 @@
 body {
     font-family: 'SegoeUI';
+    background-color: #E8D8C4;
 }
 
-.navigation-grocery{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#main-nav {
+	background-color: #6D2932;
+    width: 100%;
+    border-radius:6px;
+	color: #fff;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
 }
 
-.navigation-items{
+.main-nav a {
+	color: #fff;
+	text-decoration: none;
+	padding: 10px;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+}
+
+.main-nav a:hover {
+	background-color: #8F454E;
+}
+
+.logo {
+    width: 128px;
+    height: auto;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.main-nav{
     list-style-type: none;
 }
 
-.navigation-items li{
+.main-nav li{
     display: inline;
     margin-right: 16px;
 }
 
 header{
+    margin-top: 54px;
     text-align: center;
 }
 
-header img {
-    max-width: 100%;
-    height: 300px;
+header h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #561C24;
+}
+
+header h4 {
+    color: #8F454E;
+    margin-top: 48px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#slider {
+    width: 100%;
+    overflow: hidden;
+    justify-content: end; /* Memposisikan flex container (slides) ke tengah secara horizontal */
+    align-items: end;
+    margin-left: 38%;
+}
+
+#slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 300px; /* Mengatur lebar slide menjadi 100% */
+    height: 300px; /* Anda bisa mengganti nilai tinggi sesuai kebutuhan */
+    flex-shrink: 0;
+    overflow: hidden; /* Menghindari tumpang tindih */
+}
+
+.slide img {
+    width: 100%; /* Membuat gambar mengisi seluruh area slide */
+    height: 100%; /* Memastikan gambar mengisi seluruh area slide */
+    object-fit: cover; /* Memastikan gambar mencakup seluruh area tanpa mengubah rasio aspek */
 }
 
 .our-product {
@@ -33,30 +91,119 @@ header img {
 
 .our-product div{
     text-align: center;
-    background-color: grey;
+    margin-top: 28px;
+    background-color: #6D2932;
 }
 
 .circle {
     width: 100px;
     height: 100px;
-    border: 2px solid green;
+    text-align: center;
+    border: 2px solid #6D2932;
     border-radius: 50%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.inquiry-customer {
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+.circle p {
+    margin: 0;
+    font-size: 18px;
+    color: white;
 }
 
-.inquiry-form {
+.circle:hover {
+    background-color: #8F454E;
+}
+
+.lorem {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    padding: 2em;
+    color: #561C24;
+}
+
+.contact-us {
+    text-align: center;
+    background-color: white;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding-bottom: 10px;
+    padding-top: 4px;
+    margin-top: 32px;
+    border-radius: 10px;
+}
+
+.error-message {
+    color: red;
+}
+
+.responsive {
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.output {
-    display: none;
-    border: 1px solid black;
+.lorem-contact {
+    width:  80%;
+    padding-right: 3em;
+    height: auto;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+}
+
+@media only  screen and (max-width: 700px) {
+    .form input,
+    .form select {
+        width: 100%; /* Mengubah lebar input menjadi 100% */
+        padding: 10px; /* Menambahkan padding pada input */
+        box-sizing: border-box; /* Menghitung padding dan border dalam lebar total */
+        margin-bottom: 10px; /* Menambahkan margin antar input */
+    }
+
+    .form select {
+        width: 100%; /* Mengubah lebar select menjadi 100% */
+    }
+}
+
+.guitar-img {
+    max-width: 520px;
+    height: 520px;
+    border-radius: 6px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+}
+.violin-img {
+    max-width: 520px;
+    height: 520px;
+    border-radius: 6px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+}
+.piano-img {
+    max-width: 520px;
+    height: 520px;
+    border-radius: 6px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
 }

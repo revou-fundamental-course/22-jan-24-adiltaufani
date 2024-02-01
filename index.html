@@ -1,45 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>RevoU Mini Project</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav class="navigation-grocery">
-        <img src="alter-logo.png" alt="Logo" class="logo">
-        <ul class="navigation-items">
-            <li>Home</li>
-            <li>Our Product</li>
-            <li>Contact us</li>
-        </ul>
-    </nav>
-    <header>
-        <h1>Welcome to our Grocery Store!</h1>
-        <h4>This is for practice</h4>
-        <img src="assets/Header.jpeg" alt="Header Img">
-    </header>
-    <div class="our-product">
-        <div class="circle" style="background-image: url('assets/Header.jpeg');">
-            <p>Terdiri dari sayuran dan buah-buahan</p>
+    <div class="responsive">
+        <nav id="main-nav" class="main-nav">
+            <img src="assets/Maestro.png" alt="Logo" class="logo">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    
+        <header>
+            <h1>Welcome to our Instrument Store <span id="panggilan"></span>!</h1>
+            <h4>We provide various musical instruments</h4>
+            <div id="slider">
+                <div id="slides">
+                    <div class="slide">
+                        <img src="assets/Header.jpeg" alt="image-1">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/guitar.jpg" alt="image-2">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/violin.jpg" alt="image-3">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/piano.jpeg" alt="image-4">
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+        <div class="our-product">
+            <div class="circle" data-link="guitar.html"> <!-- style="background-image: url('assets/Header.jpeg'); #nambah img pada bg-->
+                <p>Guitar</p>        
+            </div>
+            <div class="circle" data-link="violin.html">
+                <p>Violin</p>
+            </div>
+            <div class="circle" data-link="piano.html">
+                <p>Piano</p>
+            </div>
         </div>
-        <div class="circle">
-            <p>Terdiri dari sayuran dan buah-buahan</p>
+        
+        <div class="lorem-contact">
+            <div class="lorem">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+                     dolore iste porro sit illum minima et neque a doloribus sed
+                      nisi, magnam tempore aperiam, odit veritatis nulla assumenda.
+                       Ex, maiores?</p>
+            </div>
+            
+            <div class="contact-us">
+                <h2>Contact Us</h2>
+                <h5>Our employees will reply to your question within 1x24 hours after we receive your question</h5>
+                <hr style="border: 2px solid #6D2932; margin-left: 8px; margin-right: 8px;">
+                
+                <div class="form">
+                    <div>
+                        <p>Your Name</p>
+                        <input type="text" id="name-input" name="name" placeholder="input name" required autocomplete="name">
+                        <p id="name-error" class="error-message"></p>
+                    </div>
+                    <div>
+                        <p>Email Address</p>
+                        <input type="email" id="email-input" name="email" placeholder="input email" required autocomplete="email">
+                        <p id="email-error" class="error-message"></p>
+                    </div>
+                    <div>
+                        <p>What are you interested in?</p>
+                        <select name="interest" id="interest-input">
+                            <option value="">Select your option</option>
+                            <option value="1">Guitar</option>
+                            <option value="2">Violin</option>
+                            <option value="3">Piano</option>
+                        </select>
+                        <p id="interest-error" class="error-message"></p>
+                    </div>
+                    <button id="submit">SEND</button>
+                    <br>
+                    <br>           
+                </div>
+            </div>
         </div>
-        <div class="circle">
-            <p>Terdiri dari sayuran dan buah-buahan</p>
-        </div>
+
+
     </div>
 
-    <div class="inquiry-customer">
-        <form class="inquiry-form">
-            <label for="name">Name</label><br>
-            <input type="text" id="name">
-        </form>
-        <div class="output">
-
-        </div>
-    </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
